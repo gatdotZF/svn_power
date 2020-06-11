@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//Common/Init.py=GB18030
+encoding//Common/auto_lib.py=GB18030
+encoding//Common/createExcel.py=GB18030
+encoding//Common/createFile.py=GB18030
+encoding//Common/fillValue.py=GB18030
+encoding//Common/lxmlReader.py=utf-8
+encoding//Common/readConifg.py=GB18030
+encoding//Common/setup.py=GB18030
+encoding//Common/startSoft.py=GB18030
+encoding//testCase/busConf.py=GB18030
+encoding//testCase/correctTest.py=GB18030
+encoding//testCase/creatExcReport.py=GB18030
+encoding//testCase/envPath.py=GB18030
+encoding//testCase/fillResult.py=GB18030
+encoding//testCase/systemConf.py=GB18030
+encoding//testCase/timingInfoTest.py=GB18030

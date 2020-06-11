@@ -1,0 +1,6 @@
+[Power]
+softWindowName = 科梁电池模拟器监控软件V1.0.2
+softSetupDir = E:\模拟\ReleaseV1.02_20190315
+softName = BatterySimulator.exe
+faultTest = 0
+loopTimes = 1

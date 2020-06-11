@@ -1,0 +1,47 @@
+#! /usr/bin/env python
+#coding=GB18030
+from xlutils.copy import copy
+from xlrd import open_workbook
+from xlwt import easyxf
+from datetime import *
+import os
+import sys
+import xlwt
+import xlrd
+import time
+from numpy import empty
+
+t=time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
+pcNo=raw_input("Please input PC No.:")
+while not pcNo:
+    pcNo=raw_input("PC No. couldn't be empty,please input again:")
+
+revNo=raw_input("Please input REV No.:")
+while not revNo:
+    revNo=raw_input("REV No. couldn't be empty,please input again:")
+excelName=pcNo+"_"+revNo+"_"+t
+row=1
+col=1
+item_List=['Time',u'´ÎÊý','Card','Channel','Set','Read','Normal','Fault']
+workbook=xlwt.Workbook(encoding='ascii')
+worksheet=workbook.add_sheet("Sheet1")
+borders=xlwt.Borders()
+borders.left = xlwt.Borders.THIN
+borders.right = xlwt.Borders.THIN
+borders.top = xlwt.Borders.THIN
+borders.bottom = xlwt.Borders.THIN
+style='pattern: pattern solid, fore_colour yellow; '
+style += 'font: bold on; '
+style += 'align: horz center, vert center; '
+data_style=xlwt.easyxf(style)
+data_style.borders=borders
+for i in range(len(item_List)):
+    worksheet.write(row,col+i,item_List[i],data_style)
+    worksheet.col(col+i).width=3000
+worksheet.write_merge(0,0,5,6,'Value',data_style)
+worksheet.write_merge(0,0,7,8,'Result',data_style)
+workbook.save('./%s.xls'%excelName)
+
+_file=open("name_exc",'w')
+_file.write('%s.xls'%excelName)
+_file.close()
